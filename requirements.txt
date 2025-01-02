@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+scikit-learn
+seaborn
+pmdarima
+statsmodels
+pytest
+fastapi
+uvicorn
+flask
+joblib
+gdown
+xgboost
+gunicorn
