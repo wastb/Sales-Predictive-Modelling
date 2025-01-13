@@ -40,6 +40,11 @@ python flask/app.py
 ## Web app
 The following link provides a hosted web that predicts sells using a machine learning model.
 [Sales Predictor](https://kiam-week4-5.onrender.com/)
+
+## Results
+Below is an example of the sales forecast:
+
+
 ## Conclusion
 
 This project provides a comprehensive customer behavior analysis and ende to end sales forecasting.
