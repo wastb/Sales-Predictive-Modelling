@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Sales Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:focus {
+            border-color: #3b5998;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b5998;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2d4373;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #3b5998;
+            color: white;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Store Sales Prediction</h1>
+        <p>Enter the details to predict sales for the store</p>
+    </header>
+
+    <div class="container">
+        <form method="POST">
+            <div class="form-group">
+                <label for="Store">Store</label>
+                <input type="text" name="Store" placeholder="Enter Store ID" required>
+            </div>
+            <div class="form-group">
+                <label for="Date">Date</label>
+                <input type="date" name="Date" id="Date" placeholder="Select Date" required>
+            </div>
+            <div class="form-group">
+                <label for="DayOfWeek">Day of Week</label>
+                <input type="text" name="DayOfWeek" placeholder="Enter Day of the Week" required>
+            </div>
+            <div class="form-group">
+                <label for="Open">Open Store</label>
+                <input type="text" name="Open" placeholder="Is Store Open?" required>
+            </div>
+            <div class="form-group">
+                <label for="Promo">Promo</label>
+                <input type="text" name="Promo" placeholder="Enter Promo Status" required>
+            </div>
+            <div class="form-group">
+                <label for="StateHoliday">State Holiday</label>
+                <input type="text" name="StateHoliday" placeholder="State Holiday Status" required>
+            </div>
+            <div class="form-group">
+                <label for="SchoolHoliday">School Holiday</label>
+                <input type="text" name="SchoolHoliday" placeholder="School Holiday Status" required>
+            </div>
+            <div class="form-group">
+                <label for="StoreType">Store Type</label>
+                <input type="text" name="StoreType" placeholder="Store Type" required>
+            </div>
+            <div class="form-group">
+                <label for="Assortment">Assortment</label>
+                <input type="text" name="Assortment" placeholder="Assortment Type" required>
+            </div>
+            <div class="form-group">
+                <label for="CompetitionDistance">Competition Distance</label>
+                <input type="text" name="CompetitionDistance" placeholder="Distance to Competition (m)" required>
+            </div>
+            <div class="form-group">
+                <label for="CompetitionOpenSinceMonth">Competition Open Since Month</label>
+                <input type="text" name="CompetitionOpenSinceMonth" placeholder="Month Competition Opened" required>
+            </div>
+            <div class="form-group">
+                <label for="CompetitionOpenSinceYear">Competition Open Since Year</label>
+                <input type="text" name="CompetitionOpenSinceYear" placeholder="Year Competition Opened" required>
+            </div>
+            <div class="form-group">
+                <label for="Promo2">Promo2</label>
+                <input type="text" name="Promo2" placeholder="Promo2 Status" required>
+            </div>
+            <div class="form-group">
+                <label for="Promo2SinceWeek">Promo2 Since Week</label>
+                <input type="text" name="Promo2SinceWeek" placeholder="Week of Promo2 Start" required>
+            </div>
+            <div class="form-group">
+                <label for="Promo2SinceYear">Promo2 Since Year</label>
+                <input type="text" name="Promo2SinceYear" placeholder="Year of Promo2 Start" required>
+            </div>
+            <button type="submit">Predict Sales</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Store Sales Prediction App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
