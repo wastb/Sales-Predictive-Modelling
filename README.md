@@ -33,11 +33,21 @@ cd KAIM-Week4
 ```bash
 pip install -r requirements.txt
 ```
-4. Start The project
+4. For Prediction use
+```bash
+python flask/app.py
+```
+## Web app
+The following link provides a hosted web that predicts sells using a machine learning model.
+[Sales Predictor](https://kiam-week4-5.onrender.com/)
+
+## Results
+Below is an example of the sales forecast:
+
 
 ## Conclusion
 
-This project provides a comprehensive customer behavior analysis.
+This project provides a comprehensive customer behavior analysis and ende to end sales forecasting.
 ## Contact Information
 
 For any questions or further information, please contact [Wasihun Tesfaye](mailto:wasihunpersonal@gmail.com).
