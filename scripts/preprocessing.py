@@ -13,21 +13,25 @@ def load_data(path):
         df = pd.read_csv(path, low_memory=False)
         logging.info("Data Loaded Successfully!!")
         return df
-    
-    except:
-        logging.info("An Error Occured While Loading!!")
+    except Exception as e:
+        logging.error(f"An Error Occurred While Loading: {e}")
+        return None  # Ensure function always returns a value
 
 def change_datatypes(df):
     """ Changes data types of columns to their appropriate format"""
-    logging.info("Changin Data Types to appropriate format >>> ")
-    df['Date'] = pd.to_datetime(df['Date'])
-    df['CompetitionOpenSinceYear'] = pd.to_datetime(df['CompetitionOpenSinceYear'].astype(int), format='%Y')
-    df['Promo2SinceYear'] = pd.to_datetime(df['Promo2SinceYear'].astype(int), format='%Y')
+    logging.info("Changing Data Types to appropriate format >>> ")
 
-    df['CompetitionOpenSinceMonth'] = df['CompetitionOpenSinceYear'].astype(int)
+    df['Date'] = pd.to_datetime(df['Date'])
+
+    # Fill NaN before converting to integers
+    df['CompetitionOpenSinceYear'] = df['CompetitionOpenSinceYear'].fillna(1900).astype(int)
+    df['Promo2SinceYear'] = df['Promo2SinceYear'].fillna(1900).astype(int)
+
+    df['CompetitionOpenSinceMonth'] = df['CompetitionOpenSinceMonth'].fillna(1).astype(int)
     df['Promo2SinceYear'] = df['Promo2SinceYear'].astype(int)
 
     logging.info("Data types Changed Successfully")
+
 
 def replace_missing_values(df):
     """ Handle Missing Values """
