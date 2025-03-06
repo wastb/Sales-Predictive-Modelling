@@ -44,6 +44,7 @@ The following link provides a hosted web that predicts sells using a machine lea
 ## Results
 Below is an example of the sales forecast:
 
+![rosmann prediction](https://github.com/user-attachments/assets/be118b37-ffd8-44da-a38b-fc727da7f9fb)
 
 ## Conclusion
 
