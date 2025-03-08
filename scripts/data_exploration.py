@@ -356,7 +356,7 @@ class DataExploration:
         self.data.loc[self.data['Date'] == holiday_date, 'holidays'] = 'During'
         self.data.loc[(self.data['Date'] > holiday_date) & (self.data['Date'] <= after_holiday_date), 'holidays'] = 'After'
 
-        logging.info("Plotting Bar chart... ")
+        logging.info("Plotting Bar chart for christmas... ")
 
         # Create the bar plot
         plt.figure(figsize=(12, 6))  # Set the figure size
